@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AkaziKacu - Shaka Akazi</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#home" class="logo">💼 AkaziKacu</a>
+      <div class="nav-links">
+        <a href="#home">🏠 Ahabanza</a>
+        <a href="#jobs">💼 Akazi</a>
+        <a href="#tips">💡 Inama</a>
+        <a href="#contact">📞 Twandikire</a>
+        <a href="#post-job">➕ Tanga Akazi</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h1>Shaka akazi. Wubake ejo hawe.</h1>
+      <p>Menya amahirwe y'akazi na stage mu Rwanda.
+        Tangira urugendo rwawe uyu munsi.</p>
+      <a href="#jobs" class="btn">Reba Akazi →</a>
+    </section>
+
+    <section id="jobs" class="section">
+      <h2>Akazi gahari</h2>
+      <p>Shaka amahirwe ajyanye n'ubumenyi bwawe.</p>
+
+      <div class="search-form">
+        <select id="searchLocation">
+          <option value="">Aho kari hose</option>
+          <option value="Kigali">Kigali</option>
+          <option value="Huye">Huye</option>
+          <option value="Musanze">Musanze</option>
+          <option value="Rubavu">Rubavu</option>
+          <option value="Gukorera kuri internet">Gukorera kuri internet</option>
+        </select>
+
+        <select id="searchType">
+          <option value="">Ubwoko bwose</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Internship">Internship</option>
+          <option value="Temporary">Temporary</option>
+        </select>
+
+        <button type="button" id="searchButton" class="btn">
+          Shakisha
+        </button>
+      </div>
+
+      <p id="searchMessage" role="status"></p>
+      <div id="jobsList" class="jobs-grid"></div>
+    </section>
+
+    <section id="tips" class="section">
+      <h2>Inama zagufasha kubona akazi</h2>
+      <div class="tips-grid">
+        <article class="tip-card">
+          <h3>Kora CV nziza</h3>
+          <p>Garagaza ubumenyi, amashuri wize n'imishinga wakoze.</p>
+        </article>
+        <article class="tip-card">
+          <h3>Ongera ubumenyi</h3>
+          <p>Jya wiga buri munsi kandi wubake imishinga yawe.</p>
+        </article>
+        <article class="tip-card">
+          <h3>Itegure interview</h3>
+          <p>Menya ibyo ikigo gikora kandi witoze gusubiza ibibazo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="post-job" class="section">
+      <h2>Ufite akazi ushaka gutanga?</h2>
+      <p>Ongeramo itangazo kugira ngo abashaka akazi baribone.</p>
+
+      <form id="jobForm" class="job-form">
+        <label for="jobTitle">Izina ry'akazi</label>
+        <input id="jobTitle" name="title" type="text"
+          placeholder="Urugero: Umwubatsi" required>
+
+        <label for="company">Izina ry'ikigo</label>
+        <input id="company" name="company" type="text"
+          placeholder="Urugero: Rugara Ltd" required>
+
+        <label for="jobLocation">Aho akazi kari</label>
+        <select id="jobLocation" name="location" required>
+          <option value="">Hitamo aho kari</option>
+          <option value="Kigali">Kigali</option>
+          <option value="Huye">Huye</option>
+          <option value="Musanze">Musanze</option>
+          <option value="Rubavu">Rubavu</option>
+          <option value="Gukorera kuri internet">Gukorera kuri internet</option>
+        </select>
+
+        <label for="jobType">Ubwoko bw'akazi</label>
+        <select id="jobType" name="type" required>
+          <option value="">Hitamo ubwoko</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Internship">Internship</option>
+          <option value="Temporary">Temporary</option>
+        </select>
+
+        <label for="jobDescription">Ibisobanuro by'akazi</label>
+        <textarea id="jobDescription" name="description"
+          placeholder="Andika ibisabwa n'inshingano..." required></textarea>
+
+        <label for="contact">Email cyangwa telefoni</label>
+        <input id="contact" name="contact" type="text"
+          placeholder="Urugero: akazi@email.com" required>
+
+        <button type="submit" class="btn">Ongeramo Itangazo</button>
+        <p id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+<section id="contact" class="section contact-section">
+  <h2>Twandikire</h2>
+  <p>
+    Murakaza neza kuri AkaziKacu. Dufatanye gufungura
+    amahirwe y'akazi mu Rwanda.
+  </p>
+
+  <form id="contactForm" class="contact-form">
+    <label for="contactName">Amazina yawe</label>
+    <input
+      type="text"
+      id="contactName"
+      name="name"
+      placeholder="Andika amazina yawe"
+      required
+    >
+
+    <label for="contactEmail">Email yawe</label>
+    <input
+      type="email"
+      id="contactEmail"
+      name="email"
+      placeholder="Urugero: izina@email.com"
+      required
+    >
+
+    <label for="contactSubject">Umutwe w'ubutumwa</label>
+    <input
+      type="text"
+      id="contactSubject"
+      name="subject"
+      placeholder="Andika icyo ushaka kutubwira"
+      required
+    >
+
+    <label for="contactMessage">Ubutumwa bwawe</label>
+    <textarea
+      id="contactMessage"
+      name="message"
+      rows="6"
+      placeholder="Andika ubutumwa bwawe hano..."
+      required
+    ></textarea>
+
+    <button type="submit" class="btn">
+      Ohereza Ubutumwa
+    </button>
+
+    <p id="contactFeedback" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+
+ 
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AkaziKacu. Uburenganzira bwose burabitswe.</p>
+  </footer>
+</body>
+</html>
